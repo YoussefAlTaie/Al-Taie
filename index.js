@@ -15,7 +15,7 @@ for (const token of tokens) {
 
   new userAccount(client, Discord).leveling({
     channel: '1187808730440540294',
-    randomLetters: false,
+    randomLetters: true,
     time: 600000,
     type: 'ar'
   });
