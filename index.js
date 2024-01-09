@@ -20,4 +20,5 @@ for (const token of tokens) {
     type: 'ar'
   });
 
-  client.login(token)
+  client.login(token);
+}  
