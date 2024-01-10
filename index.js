@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js-selfbot-v13");
 const { userAccount } = require("sphinx-run");
 
@@ -16,7 +15,7 @@ for (const token of tokens) {
   new userAccount(client, Discord).leveling({
     channel: '1187808730440540294',
     randomLetters: true,
-    time: 600000,
+    time: 300000,
     type: 'ar'
   });
 
