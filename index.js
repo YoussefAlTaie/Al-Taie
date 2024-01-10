@@ -1,23 +1,7 @@
-const Discord = require("discord.js-selfbot-v13");
-const { userAccount } = require("sphinx-run");
+const Discord = require("discord.js-selfbot-v13") // npm i discord.js-selfbot-v13 (required)
+const client = new Discord.Client({checkUpdate: false})
+const sphinx = require("sphinx-self");
 
-const tokens = process.env["token"].split("**");
+new sphinx.Core(client).leveling({ channel: "1187808730440540294", randomLetters: true, type: 'ar', time: 300000 }) //hover for options
 
-for (const token of tokens) {
-  const client = new Discord.Client({
-    intents: [Discord.Intents.FLAGS.GUILDS]
-  });
-
-  client.on('ready', async () => {
-    console.log(`${client.user.username} is ready!`);
-  });
-
-  new userAccount(client, Discord).leveling({
-    channel: '1187808730440540294',
-    randomLetters: true,
-    time: 300000,
-    type: 'ar'
-  });
-
-  client.login(token);
-}  
+client.login(process.env.TOKEN) //Not saved.
